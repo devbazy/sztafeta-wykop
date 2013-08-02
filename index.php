@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+        <link href="css/chosen.min.css" rel="stylesheet" media="screen">
         <?php 
          set_time_limit(15);
          ini_set('memory_limit', '256M');
@@ -18,8 +19,11 @@
          $kilometraz = $sztafeta->kilometrazWykres();
 ?>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-		<script type="text/javascript">
-$(function () {
+        <script type="text/javascript" src="js/chosen.jquery.min.js"></script>
+        <script type="text/javascript">
+    $(function () {
+        $("select").chosen();
+		
         $('#wykres').highcharts({
             chart: {
                 type: 'column',
